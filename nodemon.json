@@ -1,0 +1,24 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "src/dist",
+    "src/main.ts",
+    "src/polyfills.ts",
+    "test.ts",
+    "tsconfig.json"
+  ],
+  "events": {
+    "exit": "ng build"
+  },
+  "watch": [
+    "server/",
+    "src/"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js json html ts css scss"
+}

@@ -1,0 +1,5 @@
+<select name="issue" class="ui fluid dropdown">
+  <option *ngFor="let issue of issues" [value]="issue.id">
+    {{issue.title}}
+  </option>
+</select>
