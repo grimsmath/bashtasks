@@ -11,11 +11,26 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="assets/semantic/dist/semantic.min.css" />
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
 </head>
 <body>
   <app-root>Loading...</app-root>
 
   <script src="assets/js/jquery-3.1.1.js"></script>
   <script src="assets/semantic/dist/semantic.min.js"></script>
+  <script>
+    $(function () {
+      $('.ui.menu .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+      $('.ui.menu a.item')
+        .on('click', function () {
+          $(this).addClass('active')
+            .siblings()
+            .removeClass('active');
+        });
+    });
+  </script>
 </body>
 </html>
